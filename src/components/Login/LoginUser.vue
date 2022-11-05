@@ -36,12 +36,13 @@ label="password shh"
 v-model="password_confirmation"
 type="password"
 label="Confirm your password"
->
-</v-text-field>
+> 
+</v-text-field> 
 
 <div v-if="error">
           {{error}}
         </div>
+
 
         <div v-if="success" id="success">
           Logged in Successfully
@@ -112,8 +113,10 @@ methods:{
 
 // }
 
+// https://masteringjs.io/tutorials/vue/axios-login
 login: async function() {
-        const auth = { name: this.name, email: this.email, password: this.password, password_confirmation: this.password  };
+        const auth = { name: this.name, email: this.email, password: this.password, 
+          password_confirmation: this.password};
         // Correct username is 'foo' and password is 'bar'
         const url = 'http://localhost:8000/api/login';
         this.success = false;
